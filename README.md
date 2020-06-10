@@ -1,2 +1,2 @@
 # test_wafer_generator
-Used to characterization of standard cells and Test structures
+It is used to characterization of standard cells and Test structures 
