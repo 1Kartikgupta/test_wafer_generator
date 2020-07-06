@@ -1,0 +1,48 @@
+magic
+tech scmos
+timestamp 1
+<< metal1 >>
+rect 10 10 110 110
+<< metal2 >>
+rect 10 10 110 110
+<< metal3 >>
+rect 10 10 110 110
+<< m1contact >>
+rect 15 15 25 25
+rect 15 95 25 105
+<< m2contact >>
+rect 15 15 25 25
+rect 15 95 25 105
+<< m1contact >>
+rect 40 15 50 25
+rect 40 95 50 105
+<< m2contact >>
+rect 40 15 50 25
+rect 40 95 50 105
+<< m1contact >>
+rect 65 15 75 25
+rect 65 95 75 105
+<< m2contact >>
+rect 65 15 75 25
+rect 65 95 75 105
+<< m1contact >>
+rect 15 15 25 25
+rect 95 15 105 25
+<< m2contact >>
+rect 15 15 25 25
+rect 95 15 105 25
+<< m1contact >>
+rect 15 40 25 50
+rect 95 40 105 50
+<< m2contact >>
+rect 15 40 25 50
+rect 95 40 105 50
+<< m1contact >>
+rect 15 65 25 75
+rect 95 65 105 75
+<< m2contact >>
+rect 15 65 25 75
+rect 95 65 105 75
+<< labels >>
+rlabel metal3 60 60 60 60 1 PAD
+<< end >>

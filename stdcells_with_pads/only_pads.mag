@@ -1,0 +1,28 @@
+magic
+tech scmos
+timestamp 1593452112
+use pad  pad_0
+timestamp 1
+transform 1 0 -153 0 1 85
+box 10 10 110 110
+use pad  pad_1
+timestamp 1
+transform 1 0 94 0 1 85
+box 10 10 110 110
+use pad  pad_3
+timestamp 1
+transform 1 0 -150 0 1 -135
+box 10 10 110 110
+use pad  pad_4
+timestamp 1
+transform 1 0 -396 0 1 85
+box 10 10 110 110
+use pad  pad_5
+timestamp 1
+transform 1 0 338 0 1 85
+box 10 10 110 110
+use pad  pad_2
+timestamp 1
+transform 1 0 93 0 1 -135
+box 10 10 110 110
+<< end >>
