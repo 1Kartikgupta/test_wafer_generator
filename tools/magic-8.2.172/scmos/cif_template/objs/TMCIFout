@@ -1,0 +1,704 @@
+style lambda=0.6(gen)
+    scalefactor 60 30
+    layer CWC cwell
+ calma 59 1
+    layer CWN nwell
+ bloat-or pbase,pbc/act * 360
+ bloat-or allPDiff,PFet * 300
+ bloat-or allNOhmic * 180
+ bloat-or clc/a * 60
+ or col
+ grow 180
+ shrink 180
+ calma 42 1
+    layer CWP pwell
+ bloat-or allNDiff,NFet * 300
+        bloat-or allPOhmic * 180
+ and-not CWC
+ shrink 180
+ grow 180
+ grow 180
+ shrink 180
+ calma 41 1
+    layer CMS allMetal2
+ labels m2
+ calma 51 1
+    layer CMF pad
+ grow 60
+ or allMetal1
+ labels homeMetal1
+ calma 49 1
+    layer CPG cap,cc
+ or allPoly
+ labels poly,nfet,pfet
+ calma 46 1
+    layer CAA clc
+ grow 60
+ or em,emc,col,pbase,pbc
+ or allActive
+ or allHVDiff
+ or allCCDiff
+
+ or open,pstop
+
+ labels ndiff,pdiff
+ calma 43 1
+
+    layer CX col,clc
+ grow 60
+ calma 60 1
+    layer CVA pad
+ shrink 300
+
+ or open
+
+ calma 50 1
+    layer CVA m2c
+ squares 60 120 180
+ calma 50 1
+    layer CEL allPoly2
+ calma 56 1
+    layer CCE capc,ec
+ squares 120
+ calma 55 1
+
+
+    layer CCC gc
+ calma 48 1
+
+    layer CCA ndc,pdc,BiCut,nbdc
+ squares 120
+
+ or open
+
+ calma 48 1
+    layer CCA nsc,psc
+ squares 120
+ calma 48 1
+    layer CCP pc
+ squares 120
+ calma 47 1
+    layer CBA emc,emit
+ grow 240
+ bloat-or pbc * 60
+ or pbase
+ calma 58 1
+
+    templayer XTN clc
+ grow 60
+ or em,emc,col
+ grow 120
+ bloat-or allNDiff,ndop * 120 allPOhmic,allPDiff,pdop 0
+ bloat-or nbd,nbdc,wcap * 120
+ grow 60
+ shrink 60
+ shrink 30
+ grow 30
+    templayer XTP pbc
+ grow 60
+ bloat-or allPDiff,pdop * 120 allNOhmic,allNDiff,ndop 0
+ grow 60
+ shrink 60
+ shrink 30
+ grow 30
+    layer CSN clc
+ grow 60
+ or em,emc,col
+ grow 120
+ bloat-or allNDiff * 120 allPOhmic 0
+ bloat-or NFet * 120 ndiff 180 allPOhmic 0
+ bloat-or allNOhmic * 120 allPDiff 0
+ bloat-or nbd,nbdc,wcap * 120
+ bloat-or ndop * 120 allPOhmic,allPDiff,pdop 0
+ grow 60
+ shrink 60
+ shrink 30
+ grow 30
+ and-not XTP
+ calma 45 1
+    layer CSP pbc
+ grow 60
+ bloat-or allPDiff * 120 allNOhmic 0
+ bloat-or PFet * 120 pdiff 180 allNOhmic 0
+ bloat-or allPOhmic * 120 allNDiff 0
+ bloat-or pdop * 120 allNOhmic,allNDiff,ndop 0
+ grow 60
+ shrink 60
+ shrink 30
+ grow 30
+
+ bloat-min pstop * 120 open 0
+
+ and-not XTN
+ and-not CSN
+ calma 44 1
+    layer CCD allCCDiff
+ grow 120
+ calma 57 1
+    layer COP open
+        calma 23 1
+    layer CPS pstop
+        calma 24 1
+    layer COG pad
+ shrink 600
+ or glass
+
+ or open
+
+ labels pad
+ calma 52 1
+    layer XP pad
+ shrink 600
+ calma 26 1
+style lambda=0.6(nwell)
+    scalefactor 60 30
+    layer CWC cwell
+ calma 59 1
+    layer CWN nwell
+ bloat-or pbase,pbc/a * 360
+ bloat-or allPDiff,PFet * 300
+ bloat-or allNOhmic * 180
+ bloat-or clc/a * 60
+ or col
+ grow 180
+ shrink 180
+ calma 42 1
+    layer CMS allMetal2
+ labels m2
+ calma 51 1
+    layer CMF pad
+ grow 60
+ or allMetal1
+ labels homeMetal1
+ calma 49 1
+    layer CPG cap,cc
+ or allPoly
+ labels poly,nfet,pfet
+ calma 46 1
+    layer CAA clc
+ grow 60
+ or em,emc,col,pbase,pbc
+ or allActive
+ or allHVDiff
+ or allCCDiff
+
+        or open,pstop
+
+ labels ndiff,pdiff
+ calma 43 1
+
+    layer CX col,clc
+ grow 60
+ calma 60 1
+    layer CVA pad
+ shrink 300
+
+        or open
+
+ calma 50 1
+    layer CVA m2c
+ squares 60 120 180
+ calma 50 1
+    layer CEL allPoly2
+ calma 56 1
+    layer CCE capc,ec
+ squares 120
+ calma 55 1
+
+
+    layer CCC gc
+ calma 63 1
+
+    layer CCA ndc,pdc,BiCut,nbdc
+ squares 120
+
+        or open
+
+ calma 48 1
+    layer CCA nsc,psc
+ squares 120
+ calma 48 1
+    layer CCP pc
+ squares 120
+ calma 47 1
+    layer CBA emc,emit
+ grow 240
+ bloat-or pbc * 60
+ or pbase
+ calma 58 1
+
+    templayer XTN clc
+ grow 60
+ or em,emc,col
+ grow 120
+ bloat-or allNDiff * 120 allPOhmic 0
+ bloat-or nbd,nbdc,ndop,wcap * 120
+    templayer XTP pbc
+ grow 60
+ bloat-or allPDiff * 120 allNOhmic 0
+    layer CSN clc
+ grow 60
+ or emc,emit,col
+ grow 120
+ bloat-or allNDiff * 120 allPOhmic 0
+ bloat-or NFet * 120 ndiff 180 allPOhmic 0
+ bloat-or allNOhmic * 120 allPDiff 0
+ bloat-or nbd,nbdc,ndop,wcap * 120
+ grow 60
+ shrink 60
+ shrink 30
+ grow 30
+ and-not XTP
+ calma 45 1
+    layer CSP pbc
+ grow 60
+ bloat-or allPDiff * 120 allNOhmic 0
+ bloat-or PFet * 120 pdiff 180 allNOhmic 0
+ bloat-or allPOhmic * 120 allNDiff 0
+ bloat-or pdop * 120
+ grow 60
+ shrink 60
+ shrink 30
+ grow 30
+
+        bloat-min pstop * 120 open 0
+
+ and-not XTN
+ and-not CSN
+ calma 44 1
+    layer CCD allCCDiff
+ grow 120
+ calma 57 1
+    layer COP open
+        calma 23 1
+    layer CPS pstop
+        calma 24 1
+    layer COG pad
+ shrink 600
+ or glass
+
+        or open
+
+ labels pad
+ calma 52 1
+    layer XP pad
+ shrink 600
+ calma 26 1
+
+
+
+
+
+
+
+style lambda=0.6(pwell)
+    scalefactor 60 30
+    layer CWP pwell
+ bloat-or allNDiff,NFet * 300
+        bloat-or allPOhmic * 180
+ grow 180
+ shrink 180
+ calma 41 1
+    layer CMS allMetal2
+ labels m2
+ calma 51 1
+    layer CMF pad
+ grow 60
+ or allMetal1
+ labels homeMetal1
+ calma 49 1
+    layer CPG cap,cc
+ or allPoly
+ labels poly,nfet,pfet
+ calma 46 1
+
+    layer CAA clc
+ grow 60
+ or em,emc,col
+ or allActive
+ or allHVDiff
+
+        or open,pstop
+
+ labels ndiff,pdiff
+ calma 43 1
+
+    layer CX col,clc
+ grow 60
+ calma 60 1
+    layer CVA pad
+ shrink 300
+
+        or open
+
+ calma 50 1
+    layer CVA m2c
+ squares 60 120 180
+ calma 50 1
+    layer CEL allPoly2
+ calma 56 1
+    layer CCE capc,ec
+ squares 120
+ calma 55 1
+
+
+    layer CCC gc
+ calma 63 1
+
+    layer CCA ndc,pdc,BiCut
+ squares 120
+
+        or open
+
+ calma 48 1
+    layer CCA nsc,psc
+ squares 120
+ calma 48 1
+    layer CCP pc
+ squares 120
+ calma 47 1
+    layer CBA emc,emit
+ grow 240
+ bloat-or pbc * 60
+ or pbase
+ calma 58 1
+
+    templayer XTN
+        bloat-or allNDiff * 120 allPOhmic 0
+    templayer XTP
+        bloat-or allPDiff * 120 allNOhmic 0
+    layer CSP
+ bloat-or allPDiff * 120 allNOhmic 0
+ bloat-or PFet * 120 pdiff 180 allNOhmic 0
+ bloat-or allPOhmic * 120 allNDiff 0
+ bloat-or pdop * 120
+ grow 60
+ shrink 60
+ shrink 30
+ grow 30
+
+        bloat-min pstop * 120 open 0
+
+ and-not XTN
+ calma 44 1
+    layer CSN
+ bloat-or allNDiff * 120 allPOhmic 0
+ bloat-or NFet * 120 ndiff 180 allPOhmic 0
+ bloat-or allNOhmic * 120 allPDiff 0
+ bloat-or ndop * 120
+ grow 60
+ shrink 60
+ shrink 30
+ grow 30
+ and-not XTP
+ and-not CSP
+ calma 45 1
+    layer COP open
+        calma 23 1
+    layer CPS pstop
+        calma 24 1
+    layer COG pad
+ shrink 600
+ or glass
+
+        or open
+
+ labels pad
+ calma 52 1
+    layer XP pad
+ shrink 600
+ calma 26 1
+
+
+
+
+
+
+
+
+
+
+
+
+style lambda=0.5(sub)
+    scalefactor 50 5
+    layer CWN nwell
+        bloat-or pbase,pbc/act * 300
+        bloat-or allPDiff,PFet * 250
+        bloat-or allNOhmic * 150
+        bloat-or clc/act * 50
+ or col
+        grow 150
+        shrink 150
+        calma 42 1
+    layer CWP pwell
+        bloat-or allNDiff,NFet * 250 pdop 0
+        bloat-or allPOhmic * 150 ndop 0
+        grow 150
+        shrink 150
+        calma 41 1
+    layer CMT allMetal3,pad
+        labels m3
+        calma 62 1
+    layer CMS pad
+        grow 100
+        or allMetal2
+        labels m2
+        calma 51 1
+    layer CMF pad
+ grow 200
+        or allMetal1
+        labels homeMetal1
+        calma 49 1
+    layer CPG cap,cc
+        or allPoly
+        labels poly,nfet,pfet
+        calma 46 1
+    layer CAA allActive
+ or ndop,pdop
+
+ or open,pstop
+
+        labels ndiff,pdiff
+        calma 43 1
+    layer CVS pad
+        shrink 200
+
+ or open
+
+        calma 61 1
+    layer CVS m3c
+        squares 50 100 150
+        calma 61 1
+    layer CVA pad
+        shrink 300
+
+ or open
+
+        calma 50 1
+    layer CVA m2c
+        squares 50 100 150
+        calma 50 1
+
+
+
+    layer CCC gc
+ calma 48 1
+
+
+    layer CCA pad
+ shrink 400
+        calma 48 1
+
+    layer CCA ndc,pdc
+        squares 100
+
+ or open
+
+        calma 48 1
+    layer CCA nsc,psc
+ squares 100
+ calma 48 1
+    layer CCP pc
+        squares 100
+        calma 47 1
+
+    templayer XTN
+        bloat-or allNDiff,ndop * 100 allPOhmic,allPDiff,pdop 0
+        bloat-or nbd,nbdc * 100
+        grow 50
+        shrink 50
+        shrink 25
+        grow 25
+
+    templayer XTP
+        bloat-or allPDiff,pdop * 100 allNOhmic,allNDiff,ndop 0
+        grow 50
+        shrink 50
+        shrink 25
+        grow 25
+    layer CSN
+        bloat-or allNDiff * 100 allPOhmic,pdop 0
+        bloat-or NFet * 100 ndiff 150 allPOhmic 0
+        bloat-or allNOhmic * 100 allPDiff,pdop 0
+ bloat-or ndop * 100 allPOhmic,allPDiff,pdop 0
+        grow 50
+        shrink 50
+        shrink 25
+        grow 25
+        and-not XTP
+        calma 45 1
+    layer CSP
+        bloat-or allPDiff * 100 allNOhmic,ndop 0
+        bloat-or PFet * 100 pdiff 150 allNOhmic 0
+        bloat-or allPOhmic * 100 allNDiff,ndop 0
+ bloat-or pdop * 100 allNOhmic,allNDiff,ndop 0
+        grow 50
+        shrink 50
+        shrink 25
+        grow 25
+
+        bloat-min pstop * 100 open 0
+
+        and-not XTN
+ and-not CSN
+        calma 44 1
+    layer COP open
+        calma 23 1
+    layer CPS pstop
+        calma 24 1
+    layer COG pad
+        shrink 600
+        or glass
+
+ or open
+
+ labels pad
+        calma 52 1
+    layer XP pad
+        shrink 600
+ calma 26 1
+
+    render CWN 12 -0.2 0.2
+    render CAA 2 -0.15 0.15
+    render CPG 1 0.025 0.05
+    render CEL 14 0.1 0.05
+    render CCC 19 0.0 0.2
+    render CCA 19 0.0 0.2
+    render CCP 19 0.075 0.125
+    render CMF 20 0.2 0.05
+    render CVA 19 0.25 0.05
+    render CMS 21 0.3 0.05
+
+
+
+style lambda=0.35(sub)
+    scalefactor 35 calmaonly
+    layer CWN nwell
+        bloat-or allPDiff,PFet * 175
+        bloat-or allNOhmic * 105
+        grow 105
+        shrink 105
+        calma 42 1
+    layer CWP pwell
+        bloat-or allNDiff,NFet * 175 pdop 0
+        bloat-or allPOhmic * 105 ndop 0
+        grow 105
+        shrink 105
+        calma 41 1
+    layer CMT allMetal3,pad
+        labels m3
+        calma 62 1
+    layer CMS pad
+        grow 70
+        or allMetal2
+        labels m2
+        calma 51 1
+    layer CMF pad
+ grow 140
+        or allMetal1
+        labels homeMetal1
+        calma 49 1
+    layer CPG cap,cc
+        or allPoly
+        labels poly,nfet,pfet
+        calma 46 1
+    layer CAA allActive
+ or ndop,pdop
+
+ or open,pstop
+
+        labels ndiff,pdiff
+        calma 43 1
+    layer CVS pad
+        shrink 200
+
+ or open
+
+        calma 61 1
+    layer CVS m3c
+        squares 35 70 105
+        calma 61 1
+    layer CVA pad
+        shrink 300
+
+ or open
+
+        calma 50 1
+    layer CVA m2c
+        squares 35 70 105
+        calma 50 1
+
+
+
+    layer CCC gc
+ calma 48 1
+
+    layer CCA ndc,pdc
+        squares 70
+
+ or open
+
+        calma 48 1
+    layer CCA nsc,psc
+ squares 70
+ calma 48 1
+    layer CCP pc
+        squares 70
+        calma 47 1
+
+    templayer XTN
+        bloat-or allNDiff,ndop * 70 allPOhmic,allPDiff,pdop 0
+        bloat-or nbd,nbdc * 70
+        grow 35
+        shrink 35
+        shrink 20
+        grow 20
+
+    templayer XTP
+        bloat-or allPDiff,pdop * 70 allNOhmic,allNDiff,ndop 0
+        grow 35
+        shrink 35
+        shrink 20
+        grow 20
+    layer CSN
+        bloat-or allNDiff * 70 allPOhmic,pdop 0
+        bloat-or NFet * 70 ndiff 105 allPOhmic 0
+        bloat-or allNOhmic * 70 allPDiff,pdop 0
+ bloat-or ndop * 70 allPOhmic,allPDiff,pdop 0
+        grow 35
+        shrink 35
+        shrink 20
+        grow 20
+        and-not XTP
+        calma 45 1
+    layer CSP
+        bloat-or allPDiff * 70 allNOhmic,ndop 0
+        bloat-or PFet * 70 pdiff 105 allNOhmic 0
+        bloat-or allPOhmic * 70 allNDiff,ndop 0
+ bloat-or pdop * 70 allNOhmic,allNDiff,ndop 0
+        grow 35
+        shrink 35
+        shrink 20
+        grow 20
+
+        bloat-min pstop * 70 open 0
+
+        and-not XTN
+ and-not CSN
+        calma 44 1
+    layer COP open
+        calma 23 1
+    layer CPS pstop
+        calma 24 1
+    layer COG pad
+        shrink 600
+        or glass
+
+ or open
+
+ labels pad
+        calma 52 1
+    layer XP pad
+        shrink 600
+        calma 26 1
