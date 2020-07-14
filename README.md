@@ -14,6 +14,13 @@ These above images shows that how we going to test the cells.
 The Atpg tool is an electronic design automation method/technology which is used to find an input or test sequence that when applied to a wafer containing a circuit, enables automatic test equipment (ATE)  to distinguish between the correct circuit behavior and the errors caused by the defects present in wafer. This used for failure analysis which is used to test semiconductor devices after manufacture or to assist with determining the cause of failure. By the number of modeled defects or fault models which is detectable by the number of generated pattern the effectiveness of ATPG can be measured.
 We also have one tool for generating truth table is "Truth Table Genrator" given by Librecell.
 
+## Following command is used to see these files
+
+type this command on terminal:-
+```
+magic filename.mag -T filename_of_tech_file.tech
+```
+
 # Installing the Magic tool
 
 Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow. 
@@ -47,7 +54,7 @@ We will require MAGIC software to read the ```.mag``` files
 sudo apt-get install magic
 ```
 To check whether all the tools are installed : try for checkpoints
-Checkpoint 1: type ```python3```for python, enter command ```z3 --help``` for z3 solver Give command ```ngspice``` for ngspice
+Checkpoint: type ```python3```for python, enter command ```z3 --help``` for z3 solver Give command ```ngspice``` for ngspice
 
 Now we need to work on thr python working environment
 use the foloowing commands for setting up your python virtual environment
@@ -140,6 +147,17 @@ Generate a layout from a SPICE netlist which includes the transistor sizes.
 ```sh
 cd librecell-layout
 mkdir /tmp/mylibrary
-lclayout --output-dir /tmp/mylibrary --tech examples/dummy_tech.py --netlist examples/cells.sp --cell AND2X1
+lclayout --output-dir /tmp/mylibrary --tech examples/dummy_tech.py --netlist examples/cells.sp --cell AOI2X1
 # Use a GDS viewer such as KLayout to inspect the generated layout file `/tmp/mylibrary/*.gds`
 ```
+
+## Usage of Librecell
+
+LibreCell is a toolbox for automated synthesis of CMOS logic cells.
+
+LibreCell is structured in multiple sub-projects:
+* [librecell-layout](librecell-layout): Automated layout generator for CMOS standard cells.
+* [librecell-lib](librecell-lib): Characterization kit for CMOS cells and tool for handling liberty files.
+* [librecell-common](librecell-common): Code that is used across different LibreCell projects such as a netlist parser.
+* [librecell-meta](librecell-meta): Convinience Python package for easier installation.
+
