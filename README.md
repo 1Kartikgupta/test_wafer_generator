@@ -164,4 +164,10 @@ LibreCell is structured in multiple sub-projects:
 ## If you want know more about this project then read following document
 
 https://github.com/1Kartikgupta/test_wafer_generator/blob/FixForBug/Test_wafer_generator.pdf
-[Test_wafer_generator.pdf](Test_wafer_generator.pdf)
+
+## Contact Details
+
+ - Kartik Gupta, ABV-IIITM,Gwalior, guptakartik279@gmail.com
+ - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
+ - Philipp Gühring, Software Architect, LibreSilicon Assocation pg@futureware.at
+ - Dr. Gaurav Trivedi Co-Principal Investigator, EICT Academy, IIT Guwahati trivedi@iitg.ac.in 
