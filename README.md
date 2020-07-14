@@ -161,3 +161,6 @@ LibreCell is structured in multiple sub-projects:
 * [librecell-common](librecell-common): Code that is used across different LibreCell projects such as a netlist parser.
 * [librecell-meta](librecell-meta): Convinience Python package for easier installation.
 
+## If you want know more about this project then read following document
+
+<a href= "">
