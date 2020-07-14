@@ -22,11 +22,11 @@ The addind_pads.tcl script takes files from the standardcelllib_files folder and
 
 type this command on terminal:-
 ```
-magic filename.mag -T libresilicon.tech
+magic AND2X1.mag -T libresilicon.tech
 ```
 we can also use following command on terminal:- 
 ```
-magic filename.mag
+magic AND2X1.mag
 ```
 
 # Installing the Magic tool
