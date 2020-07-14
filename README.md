@@ -12,13 +12,21 @@ These above images shows that how we going to test the cells.
 2. Like the above images we will collect all the test cells on the Die, so that we can test each of them with wafer probing machine. 
 3. We use Automatic Test Pattern Generation technique for testing the test cells. 
 The Atpg tool is an electronic design automation method/technology which is used to find an input or test sequence that when applied to a wafer containing a circuit, enables automatic test equipment (ATE)  to distinguish between the correct circuit behavior and the errors caused by the defects present in wafer. This used for failure analysis which is used to test semiconductor devices after manufacture or to assist with determining the cause of failure. By the number of modeled defects or fault models which is detectable by the number of generated pattern the effectiveness of ATPG can be measured.
-We also have one tool for generating truth table is "Truth Table Genrator" given by Librecell.
+We also have one tool for generating truth table is "Truth Table Genrator" which is given by Libresilicon.
+
+## Adding Pads by tcl script 
+The addind_pads.tcl script takes files from the standardcelllib_files folder and includes pads with standard cells in a specified position, and then saves the files in the stdcells_with_pads folder.
+<img src= "https://github.com/1Kartikgupta/test_wafer_generator/blob/FixForBug/adding_pads.jpg">
 
 ## Following command is used to see these files
 
 type this command on terminal:-
 ```
-magic filename.mag -T filename_of_tech_file.tech
+magic filename.mag -T libresilicon.tech
+```
+we can also use following command on terminal:- 
+```
+magic filename.mag
 ```
 
 # Installing the Magic tool
