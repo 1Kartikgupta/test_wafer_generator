@@ -163,4 +163,4 @@ LibreCell is structured in multiple sub-projects:
 
 ## If you want know more about this project then read following document
 
-<a href= "https://github.com/1Kartikgupta/test_wafer_generator/blob/FixForBug/Test_wafer_generator.pdf">
+<pdf src= "https://github.com/1Kartikgupta/test_wafer_generator/blob/FixForBug/Test_wafer_generator.pdf">
