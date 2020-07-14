@@ -169,7 +169,7 @@ LibreCell is structured in multiple sub-projects:
 * [librecell-common](librecell-common): Code that is used across different LibreCell projects such as a netlist parser.
 * [librecell-meta](librecell-meta): Convinience Python package for easier installation.
 
-## If you want know more about this project then read following document
+## If you want to know more about this project then read following document
 
 https://github.com/1Kartikgupta/test_wafer_generator/blob/FixForBug/Test_wafer_generator.pdf
 
