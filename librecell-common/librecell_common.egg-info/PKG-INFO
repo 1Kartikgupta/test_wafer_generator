@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: librecell-common
+Version: 0.0.3
+Summary: Common utility functions for LibreCell suite.
+Home-page: https://codeberg.org/tok/librecell
+Author: T. Kramer
+Author-email: dont@spam.me
+License: GPLv3
+Description: # LibreCell - Common
+        This project contains code that is used across different LibreCell projects.
+Keywords: cmos cell vlsi asic
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

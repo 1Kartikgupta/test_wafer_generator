@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: librecell
+Version: 0.0.1
+Summary: Meta-package for the LibreCell suite.
+Home-page: https://codeberg.org/tok/librecell
+Author: T. Kramer
+Author-email: dont@spam.me
+License: UNKNOWN
+Description: # LibreCell Meta
+        This is a meta-package containing no code but just references to sub-packages.
+        
+        Installing this package will install
+        * librecell-layout
+        * librecell-lib
+Keywords: cmos cell generator layout characterization vlsi asic
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

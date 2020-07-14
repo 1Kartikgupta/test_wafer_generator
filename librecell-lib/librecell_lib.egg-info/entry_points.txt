@@ -1,0 +1,6 @@
+[console_scripts]
+lcsize = lclib.transistor_sizing.width_opt:main
+lctime = lclib.characterization.standalone:main
+libertymerge = lclib.liberty.merge:main
+libertyviz = lclib.liberty.visualize:main_plot_timing
+
