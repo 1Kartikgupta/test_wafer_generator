@@ -61,38 +61,3 @@ python3 -m venv my-librecell-env
 source ./my-librecell-env/bin/activate
 ```
 
-## Installing Librecell
-WE will install libre cell from git so use the following command to download and install
-```
-git clone https://codeberg.org/tok/librecell.git
-cd librecell
-```
-```
-cd librecell-common
-python3 setup.py develop
-cd ..
-```
-```
-cd librecell-layout
-python3 setup.py develop
-cd ..
-```
-```
-cd librecell-lib
-python3 setup.py develop
-cd ..
-```
-To make sure that the libre cell is installed properly typre the foloowing command
-```
-lclayout --h
-```
-If terminal is showing information or help commands then librecell is installed.
-
-Next we need to deal with actual files that is spice netlist files, tech files, directories,etc. We need to make directory in lbrecell layout folder. Make sure that you are in librecell folder right now [From librecell folder we will go to librecell-layout]
-```
-cd librecell-layout
-```
-So make a directory
-```
-mkdir /tmp/mylibrary
-```
