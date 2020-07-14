@@ -18,7 +18,7 @@ We also have one tool for generating truth table is "Truth Table Genrator" which
 The addind_pads.tcl script takes files from the standardcelllib_files folder and includes pads with standard cells in a specified position, and then saves the files in the stdcells_with_pads folder.
 <img src= "https://github.com/1Kartikgupta/test_wafer_generator/blob/FixForBug/adding_pads.jpg">
 
-## Following command is used to see these files
+## Following command is used to see magic files
 
 type this command on terminal:-
 ```
